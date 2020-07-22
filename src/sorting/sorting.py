@@ -39,27 +39,7 @@ def merge_sort(arr):
     left = arr[:mid]
     right = arr[mid:]
 
-    merge_sort(left)
-    merge_sort(right)
-
-    return merge(left, right)
-
-
-test_arr = [2, 8, 5, 3, 9, 4, 1, 7]
-# print(merge_sort(test_arr))
-merge_sort(test_arr)
-
-# test_arr_1 = [2]
-# test_arr_2 = [8]
-# test_arr_3 = [3]
-# test_arr_4 = [5]
-
-# print(merge(test_arr_1, test_arr_2))
-# print(merge(test_arr_3, test_arr_4))
-
-# print(merge(merge(test_arr_1, test_arr_2), merge(test_arr_3, test_arr_4)))
-
-# print(merge([2, 8], [3, 5]))
+    return merge(merge_sort(left), merge_sort(right))
 
 
 # STRETCH: implement the recursive logic for merge sort in a way that doesn't
